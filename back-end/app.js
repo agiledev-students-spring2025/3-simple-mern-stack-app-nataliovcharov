@@ -78,5 +78,13 @@ app.post('/messages/save', async (req, res) => {
   }
 })
 
+app.get("/api/about", (req, res) => {
+  res.json({
+      name: "Natalie Ovcarov",
+      bio: "Hi! I'm Natalie. I'm from Macedonia and have a passion for traveling, meeting new people, and exploring different languages. I love learning about new technologies and how they shape the world around us!",
+      photoUrl: "/photo.jpg" 
+  });
+});
+
 // export the express app we created to make it available to other modules
 module.exports = app // CommonJS export style!
